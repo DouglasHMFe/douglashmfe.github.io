@@ -1,52 +1,57 @@
-Hello World!
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+<!DOCTYPE html>
+<html lang="pt-br">
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <title>Terapia Sem Fronteiras</title>
+</head>
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+<body>
+    <header id="header">
+        <p class="header"> Terapia Sem Fronteiras </p>
+    </header>
+    <nav class="nav-bar">
+        <ul>
+            <li><a class="nav-bar-link" href="login.html">Login/Logout</a> </li>
+            <li><a class="nav-bar-link" href="homepage.html">Home Page</a> </li>
+            <li><a class="nav-bar-link" href="psicologos.html">Psicólogos</a> </li>
+            <li><a class="nav-bar-link" href="relatos.html">Relatos</a> </li>
+            <li><a class="nav-bar-link" href="dicas.html">Dicas</a> </li>
+            <li><a class="nav-bar-link" href="perguntas_frequentes.html">Perguntas Frequentes</a> </li>
+            <li><a class="nav-bar-link" href="entre_em_contato.html">Entre em Contato</a> </li>
+        </ul>
+    </nav>
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
 
-jobs:
-  # Build job
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+    <article>
 
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        <!-- O conteudo das páginas deve ficar aqui!-->
+
+    </article>
+
+
+    <footer class="footer">
+        <div class="footer-content-img">
+            <img class="img-footer" src="img/logo.jpg">
+        </div>
+        <div class="footer-content">
+            <ul>
+                <li><a id="facebook-link" href="https://Instagram.com.br"><i class="fa fa-facebook-f"></i></a> </li>
+                <li><a id="instagram-link" href="https://Instagram.com.br"><i class="fa fa-instagram"></i></a> </li>
+                <li><a id="whatsapp-link" href="https://Wa.me/+5511911719044.br"><i class="fa fa-whatsapp"></i></a></li>
+            </ul>
+            <p class="footer-slogan"> Conte com a gente em qualquer lugar do mundo!</p>
+            <p id="copy">&copy; 2023 terapiasemfronteiras.com.br</p>
+
+        </div>
+
+    </footer>
+ 
+</body>
+
+</html>
